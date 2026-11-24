@@ -1,3 +1,4 @@
 test:
-    @echo "Add your project tests and update this recipe to run them."
-    @exit 1
+    python3 -m venv .venv
+    .venv/bin/python -m pip install -e '.[dev]'
+    .venv/bin/python -m pytest
